@@ -6,17 +6,25 @@ API that does voice transcription.
 
 #### AWS API Gateway: for building the api
 Scalability up and down automatically based on requests
+
 Integrated with AWS Services such Lambda 
+
 Pyload modeling and Transformation
 
 #### AWS Lambda: for the operational tasks
 No resource management needed, we can focus only on the tasks needed.
+
 Scalability.
+
 Integration with AWS Services such as API Gateway, S3 and Transcribe.
+
 #### AWS S3: for storing files(input and output) 
 Scalability
+
 No management needed
+
 Integration with AWS services such as lambda and Transcribe.
+
 #### AWS Transcribe
 
 ### Overview
@@ -27,8 +35,10 @@ After that, Lambda configures and starts the AWS transcribe job and returns the 
 
 
 the API works in an asynchronous way:
+
 Send request with the input file, and receive response containing the result url.
-The reason for the asynchronous choice is that AWS Transcribe can take time, sending the result url while the processing is taking place in the background allows the request sender to focus resources on something else(other than waiting)
+
+The reason for the asynchronous choice is that AWS Transcribe can take time, sending the result url while the processing is taking place in the background allows the request sender to focus resources on something else(other than waiting).
 
 The uploaded file and the result file are both available on s3.
 
@@ -50,6 +60,7 @@ Expected output:
  "Message": "Information about the status"
 }
 ```
+AWS Transcribe takes some time to process the uploaded file, so it is advised to wait a minute or two(or more depending on the size of the uploaded file) to get the results from the URL.
 
 I have chosen to return a url with the entire Transcription Job output.
 
