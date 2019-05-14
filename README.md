@@ -41,11 +41,13 @@ from a terminal
 curl -X POST -F "data=@test_file.mp3" https://cybu70ogsc.execute-api.us-east-2.amazonaws.com/Dep1 -H "Content-Type: application/json"
 ```
 Expected output:
+```
 {
  "statusCode": 200, 
  "transcript_url": "result_url", 
  "Message": "Information about the status"
 }
+```
 
 I have chosen to return a url with the entire Transcription Job output.
 
