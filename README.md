@@ -37,7 +37,7 @@ The uploaded file and the result file are both available on s3.
 
 from a terminal 
 ```
-curl -X POST -F "data=@test_file.mp3" https://cybu70ogsc.execute-api.us-east-2.aaws.com/Dep1 -H "Content-Type: application/json"
+curl -X POST -F "data=@test_file.mp3" https://cybu70ogsc.execute-api.us-east-2.amazonaws.com/Dep1 -H "Content-Type: application/json"
 ```
 Expected output:
 {
@@ -48,7 +48,7 @@ Expected output:
 
 I have chosen to return a url with the entire Transcription Job output.
 
-or a simply a post request with the audio file from an API development environment(such as POSTMAN) to the address https://cybu70ogsc.execute-api.us-east-2.aaws.com/Dep1
+or a simply a post request with the audio file from an API development environment(such as POSTMAN) to the address https://cybu70ogsc.execute-api.us-east-2.amazonaws.com/Dep1
 
 Needless to say, this can also be integrated in other applications.
 
