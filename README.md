@@ -21,7 +21,9 @@ Integration with AWS services such as lambda and Transcribe.
 
 ### Overview
 
-A post request containing the audio file is send to API Gateway, where it's encoded to base64(to be able to upload the file without corrupting it), API Gateway passes the payload through to Lambda where the body(containing the base64 encoded file) is decoded and then stored in an s3 bucket. After that, Lambda configures and starts the AWS transcribe job and returns the Transcribe output url(made public on s3) as response to API Gateway, which sends it as a response the the request. 
+A post request containing the audio file is send to API Gateway, where it's encoded to base64(to be able to upload the file without corrupting it), API Gateway passes the payload through to Lambda where the body(containing the base64 encoded file) is decoded and then stored in an s3 bucket. 
+
+After that, Lambda configures and starts the AWS transcribe job and returns the Transcribe output url(made public on s3) as response to API Gateway, which sends it as a response the the request. 
 
 
 the API works in an asynchronous way:
@@ -57,15 +59,19 @@ Needless to say, this can also be integrated in other applications.
 
 ## Code
 The main code is for the Lambda function.
+
 Because Python library base64 which is external (not available in AWS SDK) was used, the code has been packaged as a Python Deployment package and uploaded to Lambda.
+
 (In a nutshell, the python deployment package contains the lambda code in addition to the site packages of a virtual environment where are the needed libraries are installed) 
+
 Some configurations were done for API Gateway(Payload Transformation) and S3 buckets permissions, but no major code.
+
 Screen_shorts directory contains screen shorts of the different services used.
 
 ## Improvements:
 Many improvements can be added here:
--Improvements or changes should be made with the intended production use in mind.
--Lambda is very convenient for fault tolerence, but proper Error handling can be added to deliver meaningful information.
--The result can be tailored as needed as opposed to deliver it as it is.
--More strict security policies can be applied to the output file access on s3(depending on the use case)
+- Improvements or changes should be made with the intended production use in mind.
+- Lambda is very convenient for fault tolerence, but proper Error handling can be added to deliver meaningful information.
+- The result can be tailored as needed as opposed to deliver it as it is.
+- More strict security policies can be applied to the output file access on s3(depending on the use case)
 
