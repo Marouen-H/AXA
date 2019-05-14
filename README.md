@@ -32,6 +32,7 @@ The uploaded file and the result file are both available on s3.
 
 ### Architecture
 
+![alt text](Architecture.jpg)
 
 ## Running the tests
 
