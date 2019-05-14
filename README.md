@@ -60,6 +60,7 @@ The main code is for the Lambda function.
 Because Python library base64 which is external (not available in AWS SDK) was used, the code has been packaged as a Python Deployment package and uploaded to Lambda.
 (In a nutshell, the python deployment package contains the lambda code in addition to the site packages of a virtual environment where are the needed libraries are installed) 
 Some configurations were done for API Gateway(Payload Transformation) and S3 buckets permissions, but no major code.
+Screen_shorts directory contains screen shorts of the different services used.
 
 ## Improvements:
 Many improvements can be added here:
