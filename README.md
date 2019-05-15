@@ -9,7 +9,7 @@ Scalability up and down automatically based on requests
 
 Integrated with AWS Services such Lambda 
 
-Pyload modeling and Transformation
+Payload modeling and Transformation
 
 #### AWS Lambda: for the operational tasks
 Designed for short tasks.
@@ -29,7 +29,7 @@ Integration with AWS services such as Lambda and Transcribe.
 
 #### AWS Transcribe
 
-###### These technologies are very cost effective, we're charged only based on the usage.
+###### These technologies are very cost effective, we're charged only based on the usage, they are also robust and highly available.
 
 
 ### Overview
