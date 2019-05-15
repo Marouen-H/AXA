@@ -1,4 +1,4 @@
-# Project Title
+# Project
 
 API that does voice transcription.
 
