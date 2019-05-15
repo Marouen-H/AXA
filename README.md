@@ -12,7 +12,9 @@ Integrated with AWS Services such Lambda
 Pyload modeling and Transformation
 
 #### AWS Lambda: for the operational tasks
-No resource management needed, we can focus only on the tasks needed.
+Designed for short tasks.
+
+Serverless : No resource management needed, we can focus only on the tasks needed.
 
 Scalability.
 
@@ -23,9 +25,12 @@ Scalability
 
 No management needed
 
-Integration with AWS services such as lambda and Transcribe.
+Integration with AWS services such as Lambda and Transcribe.
 
 #### AWS Transcribe
+
+###### These technologies are very cost effective, we're charged only based on the usage.
+
 
 ### Overview
 
